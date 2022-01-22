@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+	Automatically converted from Wavefront OBJ
+
+-->
+
+<scene version="0.5.0">
+	<integrator id="integrator" type="direct"/>
+
+	<sensor type="perspective" >
+		<float name="fov" value="22.8"/>
+		<transform name="toWorld" >
+			<translate x="-0.216" y="2.16" z="10.71"/>
+			<rotate x="1" angle="-4"/>
+		</transform>
+	</sensor>
+
+	<bsdf id="Fabric_bandages_material" type="diffuse">
+		<texture name="reflectance" type="bitmap">
+			<string name="filename" value="textures/Fabric036_2K_Color.png"/>
+		</texture>
+	</bsdf>
+
+	<bsdf id="Fabric_mattress_material" type="diffuse">
+		<texture name="reflectance" type="bitmap">
+			<string name="filename" value="textures/Fabric036_2K_Color.png"/>
+		</texture>
+	</bsdf>
+
+	<bsdf id="Fabric_pyjamas_material" type="diffuse">
+		<texture name="reflectance" type="bitmap">
+			<string name="filename" value="textures/Fabric036_2K_Color.png"/>
+			<rgb name="scale" value="1, 0.6, 0.87"/>
+		</texture>
+	</bsdf>
+
+	<bsdf id="Fabric_sheet_material" type="diffuse">
+		<texture name="reflectance" type="bitmap">
+			<string name="filename" value="textures/Fabric036_2K_Color.png"/>
+			<rgb name="scale" value="0.72, 0.9, 0.95"/>
+		</texture>
+	</bsdf>
+
+	<bsdf id="Fur_01_material" type="diffuse">
+		<rgb name="reflectance" value="0.27 0.18 0.04"/>
+	</bsdf>
+
+	<bsdf id="Laminate_floor_material" type="diffuse">
+		<texture name="reflectance" type="bitmap">
+			<string name="filename" value="textures/floor.jpg"/>
+		</texture>
+	</bsdf>
+
+	<bsdf id="Metal_scratched_material" type="roughconductor">
+		
+	</bsdf>
+
+	<bsdf id="Old_white_plastic_material" type="plastic">
+		<texture name="diffuseReflectance" type="bitmap">
+			<string name="filename" value="textures/Old white plastic_BaseColor.jpg"/>
+		</texture>
+	</bsdf>
+
+	<bsdf id="Wood_material" type="roughplastic">
+		<texture name="diffuseReflectance" type="bitmap">
+			<string name="filename" value="textures/Wood063_2K_Color.jpg"/>
+		</texture>
+	</bsdf>
+
+	<bsdf id="hands_material" type="diffuse">
+		<rgb name="reflectance" value="0.9, 0.545, 0.4"/>
+	</bsdf>
+
+	<bsdf id="monster_material" type="dielectric">
+	
+	</bsdf>
+
+	<bsdf id="red_dark_gloss_high_material" type="diffuse">
+		<rgb name="reflectance" value="0.00193498 0.00116099 0.00116099"/>
+	</bsdf>
+
+	<bsdf id="wall_material" type="diffuse">
+		<rgb name="reflectance" value="0.603827 0.477 0.195994"/>
+	</bsdf>
+
+	<bsdf id="white_gloss_high_material" type="plastic">
+		<rgb name="reflectance" value="0.603827 0.603827 0.603827"/>
+	</bsdf>
+
+	<shape id="scene_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="0"/>
+		<emitter type="area">
+			<rgb name="radiance" value="5, 4.8, 3.5"/>
+		</emitter>
+	</shape>
+
+	<shape id="scene_0_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="1"/>
+		<emitter type="area">
+			<rgb name="radiance" value="5, 4.8, 3.5"/>
+		</emitter>
+	</shape>
+
+	<shape id="scene_1_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="2"/>
+		<emitter type="area">
+			<rgb name="radiance" value="5, 4.8, 3.5"/>
+		</emitter>
+	</shape>
+
+	<shape id="scene_2_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="3"/>
+		<ref name="bsdf" id="Laminate_floor_material"/>
+	</shape>
+
+	<shape id="scene_3_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="4"/>
+		<ref name="bsdf" id="Wood_material"/>
+	</shape>
+
+	<shape id="scene_4_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="5"/>
+		<ref name="bsdf" id="wall_material"/>
+	</shape>
+
+	<shape id="scene_5_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="6"/>
+		<ref name="bsdf" id="Old_white_plastic_material"/>
+	</shape>
+
+	<shape id="scene_6_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="7"/>
+		<ref name="bsdf" id="Fur_01_material"/>
+	</shape>
+
+	<shape id="scene_7_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="8"/>
+		<ref name="bsdf" id="Fabric_sheet_material"/>
+	</shape>
+
+	<shape id="scene_8_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="9"/>
+		<ref name="bsdf" id="Fabric_pyjamas_material"/>
+	</shape>
+
+	<shape id="scene_9_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="10"/>
+		<ref name="bsdf" id="Fabric_pyjamas_material"/>
+	</shape>
+
+	<shape id="scene_10_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="11"/>
+		<ref name="bsdf" id="Fabric_pyjamas_material"/>
+	</shape>
+
+	<shape id="scene_11_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="12"/>
+		<ref name="bsdf" id="hands_material"/>
+	</shape>
+
+	<shape id="scene_12_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="13"/>
+		<ref name="bsdf" id="hands_material"/>
+	</shape>
+
+	<shape id="scene_13_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="14"/>
+		<ref name="bsdf" id="Metal_scratched_material"/>
+	</shape>
+
+	<shape id="scene_14_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="15"/>
+		<ref name="bsdf" id="Metal_scratched_material"/>
+	</shape>
+
+	<shape id="scene_15_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="16"/>
+		<ref name="bsdf" id="Metal_scratched_material"/>
+	</shape>
+
+	<shape id="scene_16_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="17"/>
+		<ref name="bsdf" id="Metal_scratched_material"/>
+	</shape>
+
+	<shape id="scene_17_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="18"/>
+		<ref name="bsdf" id="Metal_scratched_material"/>
+	</shape>
+
+	<shape id="scene_18_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="19"/>
+		<ref name="bsdf" id="Metal_scratched_material"/>
+	</shape>
+
+	<shape id="scene_19_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="20"/>
+		<ref name="bsdf" id="Wood_material"/>
+	</shape>
+
+	<shape id="scene_20_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="21"/>
+		<ref name="bsdf" id="Fabric_bandages_material"/>
+	</shape>
+
+	<shape id="scene_21_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="22"/>
+		<ref name="bsdf" id="Fabric_bandages_material"/>
+	</shape>
+
+	<shape id="scene_22_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="23"/>
+		<ref name="bsdf" id="Fabric_mattress_material"/>
+	</shape>
+
+	<shape id="scene_23_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="24"/>
+		<ref name="bsdf" id="Wood_material"/>
+	</shape>
+
+	<shape id="scene_24_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="25"/>
+		<ref name="bsdf" id="Wood_material"/>
+	</shape>
+
+	<shape id="scene_25_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="26"/>
+		<ref name="bsdf" id="Wood_material"/>
+	</shape>
+
+	<shape id="scene_26_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="27"/>
+		<ref name="bsdf" id="Wood_material"/>
+	</shape>
+
+	<shape id="scene_27_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="28"/>
+		<ref name="bsdf" id="Wood_material"/>
+	</shape>
+
+	<shape id="scene_28_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="29"/>
+		<ref name="bsdf" id="Wood_material"/>
+	</shape>
+
+	<shape id="scene_29_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="30"/>
+		<ref name="bsdf" id="Wood_material"/>
+	</shape>
+
+	<shape id="scene_30_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="31"/>
+		<bsdf type="diffuse"/>
+	</shape>
+
+	<shape id="scene_31_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="32"/>
+		<ref name="bsdf" id="red_dark_gloss_high_material"/>
+	</shape>
+
+	<shape id="scene_32_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="33"/>
+		<bsdf type="diffuse"/>
+	</shape>
+
+	<shape id="scene_33_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="34"/>
+		<ref name="bsdf" id="red_dark_gloss_high_material"/>
+	</shape>
+
+	<shape id="scene_34_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="35"/>
+		<bsdf type="diffuse"/>
+	</shape>
+
+	<shape id="scene_35_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="36"/>
+		<bsdf type="diffuse"/>
+	</shape>
+
+	<shape id="scene_36_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="37"/>
+		<ref name="bsdf" id="red_dark_gloss_high_material"/>
+	</shape>
+
+	<shape id="scene_37_mesh" type="serialized">
+		<string name="filename" value="models/scene.serialized"/>
+		<integer name="shapeIndex" value="38"/>
+		<ref name="bsdf" id="monster_material"/>	
+		<medium type="homogeneous" name="interior">
+			<rgb name="sigmaA" value="0.199, 24.19, 0.310"/>
+			<rgb name="sigmaS" value="7.792, 46.80, 96.60"/>
+			<phase type="hg">
+				<float name="g" value="0.419"/>
+			</phase>
+		</medium>
+	</shape>
+
+</scene>
