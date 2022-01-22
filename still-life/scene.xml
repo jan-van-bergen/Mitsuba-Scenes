@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene version="0.5.0">
+	 <sensor type="perspective">
+		<float name="fov" value="20"/>
+		<transform name="toWorld">
+			<lookat origin="0, 0.29, 2.5" target="0, 0.29, 0"/>
+		</transform>
+	 </sensor>
+	 
+	<bsdf type="twosided" id="Air">
+		<bsdf type="roughplastic">
+			<float name="alpha" value="0"/>
+			<rgb name="diffuseReflectance" value="1, 1, 1"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="Cannelle">
+		<bsdf type="diffuse">
+			<texture name="reflectance" type="bitmap">
+				<string name="filename" value="textures/cannelle.png"/>
+			</texture>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="Ceramic">
+		<bsdf type="roughplastic">
+			<float name="alpha" value="0"/>
+			<rgb name="diffuseReflectance" value="0.7, 0.7, 0.7"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="Cheese">
+		<bsdf type="roughplastic">
+			<float name="alpha" value="0"/>
+			<rgb name="diffuseReflectance" value="0.714137, 0.553717, 0.162816"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="Clay_Shader">
+		<bsdf type="roughplastic">
+			<float name="alpha" value="0"/>
+			<rgb name="diffuseReflectance" value="0.044774, 0.044774, 0.044774"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="Cuivre">
+		<bsdf type="roughconductor">
+			<float name="alpha" value="0.1"/>
+			<rgb name="eta" value="1.2, 1.167, 1.0"/>
+			<rgb name="k"   value="2.44, 1.22, 0.54"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="Glass_turquoise">
+		<bsdf type="dielectric">
+			<float name="ior" value="1.45"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="Glass_turquoise.camel">
+		<bsdf type="dielectric">
+			<float name="ior" value="1.45"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="Glass_turquoise_grade">
+		<bsdf type="dielectric">
+			<float name="ior" value="1.45"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="Marble">
+		<bsdf type="plastic">
+			<texture name="diffuseReflectance" type="bitmap">
+				<string name="filename" value="textures/blanc-arabescatino-marble-blanc-italie.jpg"/>
+			</texture>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="Material.001">
+		<bsdf type="roughplastic">
+			<float name="alpha" value="0"/>
+			<rgb name="diffuseReflectance" value="0.709864, 0.709864, 0.709864"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="Material.002">
+		<bsdf type="roughplastic">
+			<float name="alpha" value="0"/>
+			<rgb name="diffuseReflectance" value="0.5, 0.5, 0.5"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="Miel">
+		<bsdf type="dielectric">
+			<float name="ior" value="1.47"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="Moulin_bois">
+		<bsdf type="roughplastic">
+			<texture name="diffuseReflectance" type="bitmap">
+				<string name="filename" value="textures/bois moyen clair.jpg"/>
+			</texture>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="Tige">
+		<bsdf type="diffuse">
+			<texture name="reflectance" type="bitmap">
+				<string name="filename" value="textures/ec4.jpg"/>
+			</texture>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="Wall">
+		<bsdf type="diffuse">
+			<rgb name="reflectance" value="0.008195, 0.023872, 0.011336"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="Water">
+		<bsdf type="dielectric">
+			<float name="ior" value="1.33"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="Wood">
+		<bsdf type="roughplastic">
+			<float name="alpha" value="0.1"/>
+			<texture name="diffuseReflectance" type="bitmap">
+				<string name="filename" value="textures/Wooden-Background-213.jpg"/>
+			</texture>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="bois_claire">
+		<bsdf type="roughdielectric">
+			<float name="alpha" value="0.2"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="bois_claire.001">
+		<bsdf type="roughdielectric">
+			<float name="alpha" value="0.2"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="bronze">
+		<bsdf type="roughconductor">
+			<float name="alpha" value="0.1"/>
+			<rgb name="eta" value="0.19702, 0.74792, 1.3336"/>
+			<rgb name="k"   value="4.5638,  2.5461,  2.2963"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="cannell_ecorce">
+		<bsdf type="roughplastic">
+			<float name="alpha" value="0.1"/>
+			<texture name="diffuseReflectance" type="bitmap">
+				<string name="filename" value="textures/cannelle.png"/>
+			</texture>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="chrome">
+		<bsdf type="roughconductor">
+			<float name="alpha" value="0"/>
+			<rgb name="eta" value="3.0708, 3.1029, 2.2530"/>
+			<rgb name="k"   value="3.4108, 3.3300, 3.0850"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="chrome_noir">
+		<bsdf type="roughconductor">
+			<float name="alpha" value="0.2"/>
+			<rgb name="eta" value="0.5, 0.5, 0.5"/>
+			<rgb name="k"   value="0.5, 0.5, 0.5"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="cloth">
+		<bsdf type="diffuse">
+			<texture name="reflectance" type="bitmap">
+				<string name="filename" value="textures/laine_SPEC.png"/>
+			</texture>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="couteau1">
+		<bsdf type="conductor">
+			<string name="material" value="none"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="dark">
+		<bsdf type="roughplastic">
+			<float name="alpha" value="0"/>
+			<rgb name="diffuseReflectance" value="0.011606, 0.011606, 0.011606"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="etiquette">
+		<bsdf type="roughplastic">
+			<float name="alpha" value="0"/>
+			<rgb name="diffuseReflectance" value="0.5, 0.5, 0.5"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="feuille">
+		<bsdf type="diffuse">
+			<texture name="reflectance" type="bitmap">
+				<string name="filename" value="textures/Arch41_038_leaf.jpg"/>
+			</texture>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="feuille_seche">
+		<bsdf type="roughplastic">
+			<float name="alpha" value="0"/>
+			<rgb name="diffuseReflectance" value="0.5, 0.5, 0.5"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="glass_orange_dark">
+		<bsdf type="dielectric">
+			<float name="ior" value="1.45"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="graine_de_cannelle">
+		<bsdf type="roughplastic">
+			<float name="alpha" value="0.1"/>
+			<rgb name="diffuseReflectance" value="0.217285, 0.112035, 0.043724"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="graine_de_cannelle2">
+		<bsdf type="roughplastic">
+			<float name="alpha" value="0.1"/>
+			<rgb name="diffuseReflectance" value="0.13333, 0.049691, 0.013286"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="knife_wood">
+		<bsdf type="roughplastic">
+			<float name="alpha" value="0.1"/>
+			<texture name="diffuseReflectance" type="bitmap">
+				<string name="filename" value="textures/23_wood fine medium color texture-seamless.jpg"/>
+			</texture>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="planche_de_bord">
+		<bsdf type="roughplastic">
+			<float name="alpha" value="0"/>
+			<rgb name="diffuseReflectance" value="0.5, 0.5, 0.5"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="plastic_gomme">
+		<bsdf type="roughplastic">
+			<float name="alpha" value="0"/>
+			<rgb name="diffuseReflectance" value="0.7, 0.402941, 0.047142"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="pot_de_miel">
+		<bsdf type="dielectric">
+			<float name="ior" value="1.45"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="rop">
+		<bsdf type="roughplastic">
+			<float name="alpha" value="0"/>
+			<rgb name="diffuseReflectance" value="0.104403, 0.090533, 0.068031"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="rop_cannelle">
+		<bsdf type="roughplastic">
+			<float name="alpha" value="0"/>
+			<rgb name="diffuseReflectance" value="0.62987, 0.620693, 0.534593"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="sharp_knife">
+		<bsdf type="roughplastic">
+			<float name="alpha" value="0"/>
+			<rgb name="diffuseReflectance" value="0.7, 0.7, 0.7"/>
+		</bsdf>
+	</bsdf>
+	<shape type="obj">
+		<string name="filename" value="models/Circle.001_Circle.003.obj"/>
+		<ref id="rop"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Circle.obj"/>
+		<ref id="Marble"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Cloth_Shape.obj"/>
+		<ref id="cloth"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Cube.001.obj"/>
+		<ref id="Cheese"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Cube.002.obj"/>
+		<ref id="Cheese"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Cylinder.obj"/>
+		<ref id="bois_claire.001"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Line103.001.obj"/>
+		<ref id="feuille"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Line103.082.obj"/>
+		<ref id="feuille_seche"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Line103.083.obj"/>
+		<ref id="feuille_seche"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Line103.084.obj"/>
+		<ref id="feuille"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Line103.085.obj"/>
+		<ref id="feuille_seche"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Line103.obj"/>
+		<ref id="feuille_seche"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Line769.obj"/>
+		<ref id="feuille"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Line776.obj"/>
+		<ref id="feuille"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Line781.001.obj"/>
+		<ref id="feuille_seche"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Line781.002.obj"/>
+		<ref id="feuille_seche"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Line781.003.obj"/>
+		<ref id="feuille_seche"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Line781.004.obj"/>
+		<ref id="feuille_seche"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Line781.005_Line781.004.obj"/>
+		<ref id="feuille_seche"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Line781.006_Line781.002.obj"/>
+		<ref id="feuille_seche"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Line781.007_Line781.001.obj"/>
+		<ref id="feuille_seche"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Line781.008_Line781.003.obj"/>
+		<ref id="feuille_seche"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Line781.obj"/>
+		<ref id="feuille"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Line786.obj"/>
+		<ref id="feuille"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.001.obj"/>
+		<ref id="Material.002"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.002.obj"/>
+		<ref id="Water"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.003_Plane.004.obj"/>
+		<ref id="Cuivre"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.004_Plane.005.obj"/>
+		<ref id="Water"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.005_Plane.003.obj"/>
+		<ref id="Cannelle"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Circle.003_Circle.011.obj"/>
+		<ref id="rop_cannelle"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.006_Plane.007.obj"/>
+		<ref id="Wall"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.007_Plane.008.obj"/>
+		<ref id="planche_de_bord"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.008_Plane.009.obj"/>
+		<ref id="Material.001"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.010_Plane.012.obj"/>
+		<ref id="bronze"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.012_Plane.015.obj"/>
+		<ref id="bronze"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.013_Plane.010.obj"/>
+		<ref id="graine_de_cannelle2"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.014_Plane.011.obj"/>
+		<ref id="graine_de_cannelle"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.015_Plane.013.obj"/>
+		<ref id="graine_de_cannelle2"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.016_Plane.014.obj"/>
+		<ref id="graine_de_cannelle"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.017_Plane.016.obj"/>
+		<ref id="Air"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.018_Plane.017.obj"/>
+		<ref id="Ceramic"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.019.obj"/>
+		<ref id="bois_claire"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.020.obj"/>
+		<ref id="Miel"/>
+		<medium type="homogeneous">
+			<rgb name="sigmaA" value="0.0001 17.07096 68.16156"/>
+			<rgb name="sigmaS" value="0 0 0"/>
+			<phase type="hg">
+				<float name="g" value="0.9"/>
+			</phase>
+		</medium>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.021.obj"/>
+		<ref id="Water"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.022_Plane.018.obj"/>
+		<ref id="dark"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.023_Plane.022.obj"/>
+		<ref id="bois_claire"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.obj"/>
+		<ref id="glass_orange_dark"/>
+		<medium type="homogeneous">
+			<rgb name="sigmaA" value="180.544, 561.0, 1657"/>
+			<rgb name="sigmaS" value="35.65, 75.4, 124"/>
+			<phase type="hg">
+				<float name="g" value="0.8"/>
+			</phase>
+		</medium>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Sphere153.obj"/>
+		<ref id="Tige"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Sphere260.obj"/>
+		<ref id="Tige"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Area_Meshlight_Plane.006.obj"/>
+		<emitter type="area">
+			<rgb name="radiance" value="10, 10, 10"/>
+		</emitter>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Line103.002.obj"/>
+		<ref id="Tige"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Line769.001.obj"/>
+		<ref id="Tige"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Line776.001.obj"/>
+		<ref id="Tige"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Line781.009_Line781.005.obj"/>
+		<ref id="Tige"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Line786.001.obj"/>
+		<ref id="Tige"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.009_Plane.023.obj"/>
+		<ref id="Glass_turquoise.camel"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.011_Plane.024.obj"/>
+		<ref id="Glass_turquoise"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.024_Plane.025.obj"/>
+		<ref id="Wood"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.025_Plane.026.obj"/>
+		<ref id="Clay_Shader"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.026_Plane.027.obj"/>
+		<ref id="etiquette"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.027_Plane.028.obj"/>
+		<ref id="knife_wood"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.028_Plane.029.obj"/>
+		<ref id="sharp_knife"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.029_Plane.030.obj"/>
+		<ref id="couteau1"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.030_Plane.031.obj"/>
+		<ref id="cannell_ecorce"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.031_Plane.032.obj"/>
+		<ref id="graine_de_cannelle"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.032_Plane.033.obj"/>
+		<ref id="cannell_ecorce"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.033_Plane.034.obj"/>
+		<ref id="cannell_ecorce"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.034_Plane.035.obj"/>
+		<ref id="graine_de_cannelle"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.035_Plane.036.obj"/>
+		<ref id="cannell_ecorce"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.036_Plane.037.obj"/>
+		<ref id="pot_de_miel"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.037_Plane.038.obj"/>
+		<ref id="plastic_gomme"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.038_Plane.039.obj"/>
+		<ref id="Miel"/>
+		<medium type="homogeneous">
+			<rgb name="sigmaA" value="0.0001 17.07096 68.16156"/>
+			<rgb name="sigmaS" value="0 0 0"/>
+			<phase type="hg">
+				<float name="g" value="0.9"/>
+			</phase>
+		</medium>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.039_Plane.040.obj"/>
+		<ref id="chrome"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.040_Plane.041.obj"/>
+		<ref id="Glass_turquoise_grade"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.041_Plane.042.obj"/>
+		<ref id="Moulin_bois"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.042_Plane.043.obj"/>
+		<ref id="chrome_noir"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Plane.043_Plane.044.obj"/>
+		<ref id="bois_claire"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Sphere153.001.obj"/>
+		<ref id="feuille"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Sphere260.001.obj"/>
+		<ref id="feuille"/>
+	</shape>
+</scene>
