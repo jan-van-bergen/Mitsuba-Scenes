@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene version="0.5.0">
+	<bsdf type="twosided" id="AO">
+		<bsdf type="diffuse">
+			<rgb name="reflectance" value="0.8, 0.8, 0.8"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="Candle_Wick">
+		<bsdf type="diffuse">
+			<rgb name="reflectance" value="0.020379, 0.020379, 0.020379"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="Candle_wax">
+		<bsdf type="roughplastic">
+			<float name="alpha" value="0"/>
+			<rgb name="diffuseReflectance" value="0.570468, 0.52793, 0.338633"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="Flame">
+		<bsdf type="roughplastic">
+			<float name="alpha" value="0"/>
+			<rgb name="diffuseReflectance" value="0.8, 0.592394, 0.287889"/>
+		</bsdf>
+	</bsdf>
+	<shape type="obj">
+		<string name="filename" value="models/Candle_wick6_Mesh.015.obj"/>
+		<ref id="Candle_Wick"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Candle_wick5_Mesh.014.obj"/>
+		<ref id="Candle_Wick"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Candle_burn5_Mesh.013.obj"/>
+		<ref id="Candle_wax"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Candle_burn6_Mesh.012.obj"/>
+		<ref id="Candle_wax"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Candle_wick4_Mesh.009.obj"/>
+		<ref id="Candle_Wick"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Candle_burn4_Mesh.008.obj"/>
+		<ref id="Candle_wax"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Candle_wick2_Mesh.007.obj"/>
+		<ref id="Candle_Wick"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Candle_burn2_Candle.burn2.obj"/>
+		<ref id="Candle_wax"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Candle_burn3_Mesh.005.obj"/>
+		<ref id="Candle_wax"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Candle_wick3_Mesh.004.obj"/>
+		<ref id="Candle_Wick"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Candle_wick1_Mesh.003.obj"/>
+		<ref id="Candle_Wick"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Candle_burn1_Candle.burn1.obj"/>
+		<ref id="Candle_wax"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Candle_wick_Mesh.001.obj"/>
+		<ref id="Candle_Wick"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Candle_full_Candle_full.obj"/>
+		<ref id="Candle_wax"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Mesh.008_Mesh.017.obj"/>
+		<ref id="Flame"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Mesh.006_Mesh.016.obj"/>
+		<ref id="Flame"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Mesh.005_Mesh.011.obj"/>
+		<ref id="Flame"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Mesh.002_Mesh.006.obj"/>
+		<ref id="Flame"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Mesh.001_Mesh.002.obj"/>
+		<ref id="Flame"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Mesh.obj"/>
+		<ref id="Flame"/>
+	</shape>
+	<shape type="obj">
+		<string name="filename" value="models/Mesh.010.obj"/>
+		<ref id="AO"/>
+	</shape>
+</scene>
