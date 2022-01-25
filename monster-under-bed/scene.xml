@@ -7,16 +7,28 @@
 -->
 
 <scene version="0.5.0">
-	<integrator id="integrator" type="direct"/>
-
+	<integrator type="volpath" >
+		<integer name="maxDepth" value="50" />
+	</integrator>
+	
 	<sensor type="perspective" >
 		<float name="fov" value="22.8"/>
 		<transform name="toWorld" >
-			<translate x="-0.216" y="2.16" z="10.71"/>
+			<rotate y="1" angle="180"/>
 			<rotate x="1" angle="-4"/>
+			<translate x="-0.216" y="2.16" z="10.71"/>
 		</transform>
+		<film type="ldrfilm" >
+			<integer name="width" value="900" />
+			<integer name="height" value="900" />
+			<string name="fileFormat" value="png" />
+			<string name="pixelFormat" value="rgb" />
+			<float name="gamma" value="2.2" />
+			<boolean name="banner" value="false" />
+			<rfilter type="gaussian" />
+		</film>
 	</sensor>
-
+	
 	<bsdf id="Fabric_bandages_material" type="diffuse">
 		<texture name="reflectance" type="bitmap">
 			<string name="filename" value="textures/Fabric036_2K_Color.png"/>
@@ -30,16 +42,20 @@
 	</bsdf>
 
 	<bsdf id="Fabric_pyjamas_material" type="diffuse">
-		<texture name="reflectance" type="bitmap">
-			<string name="filename" value="textures/Fabric036_2K_Color.png"/>
+		<texture name="reflectance" type="scale">
 			<rgb name="scale" value="1, 0.6, 0.87"/>
+			<texture name="reflectance" type="bitmap">
+				<string name="filename" value="textures/Fabric036_2K_Color.png"/>
+			</texture>
 		</texture>
 	</bsdf>
 
 	<bsdf id="Fabric_sheet_material" type="diffuse">
-		<texture name="reflectance" type="bitmap">
-			<string name="filename" value="textures/Fabric036_2K_Color.png"/>
+		<texture name="reflectance" type="scale">
 			<rgb name="scale" value="0.72, 0.9, 0.95"/>
+			<texture type="bitmap">
+				<string name="filename" value="textures/Fabric036_2K_Color.png"/>
+			</texture>
 		</texture>
 	</bsdf>
 

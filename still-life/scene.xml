@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <scene version="0.5.0">
-	 <sensor type="perspective">
+	<integrator type="path">
+	
+	</integrator>
+	
+	<sensor type="perspective">
 		<float name="fov" value="20"/>
 		<transform name="toWorld">
-			<lookat origin="0, 0.29, 2.5" target="0, 0.29, 0"/>
+			<lookat origin="0, 0.29, 2.5" target="0, 0.29, 0" up="0, 1, 0"/>
 		</transform>
+		<film type="ldrfilm" >
+			<integer name="width" value="900" />
+			<integer name="height" value="900" />
+			<string name="fileFormat" value="png" />
+			<string name="pixelFormat" value="rgb" />
+			<float name="gamma" value="2.2" />
+			<boolean name="banner" value="false" />
+			<rfilter type="gaussian" />
+		</film>
 	 </sensor>
 	 
 	<bsdf type="twosided" id="Air">
@@ -46,20 +59,14 @@
 			<rgb name="k"   value="2.44, 1.22, 0.54"/>
 		</bsdf>
 	</bsdf>
-	<bsdf type="twosided" id="Glass_turquoise">
-		<bsdf type="dielectric">
-			<float name="ior" value="1.45"/>
-		</bsdf>
+	<bsdf type="dielectric" id="Glass_turquoise">
+		<float name="intIOR" value="1.45"/>
 	</bsdf>
-	<bsdf type="twosided" id="Glass_turquoise.camel">
-		<bsdf type="dielectric">
-			<float name="ior" value="1.45"/>
-		</bsdf>
+	<bsdf type="dielectric" id="Glass_turquoise.camel">
+		<float name="intIOR" value="1.45"/>
 	</bsdf>
-	<bsdf type="twosided" id="Glass_turquoise_grade">
-		<bsdf type="dielectric">
-			<float name="ior" value="1.45"/>
-		</bsdf>
+	<bsdf type="dielectric" id="Glass_turquoise_grade">
+		<float name="intIOR" value="1.45"/>
 	</bsdf>
 	<bsdf type="twosided" id="Marble">
 		<bsdf type="plastic">
@@ -80,10 +87,8 @@
 			<rgb name="diffuseReflectance" value="0.5, 0.5, 0.5"/>
 		</bsdf>
 	</bsdf>
-	<bsdf type="twosided" id="Miel">
-		<bsdf type="dielectric">
-			<float name="ior" value="1.47"/>
-		</bsdf>
+	<bsdf type="dielectric" id="Miel">
+		<float name="intIOR" value="1.47"/>
 	</bsdf>
 	<bsdf type="twosided" id="Moulin_bois">
 		<bsdf type="roughplastic">
@@ -104,10 +109,8 @@
 			<rgb name="reflectance" value="0.008195, 0.023872, 0.011336"/>
 		</bsdf>
 	</bsdf>
-	<bsdf type="twosided" id="Water">
-		<bsdf type="dielectric">
-			<float name="ior" value="1.33"/>
-		</bsdf>
+	<bsdf type="dielectric" id="Water">
+		<float name="intIOR" value="1.33"/>
 	</bsdf>
 	<bsdf type="twosided" id="Wood">
 		<bsdf type="roughplastic">
@@ -117,15 +120,11 @@
 			</texture>
 		</bsdf>
 	</bsdf>
-	<bsdf type="twosided" id="bois_claire">
-		<bsdf type="roughdielectric">
-			<float name="alpha" value="0.2"/>
-		</bsdf>
+	<bsdf type="roughdielectric" id="bois_claire">
+		<float name="alpha" value="0.2"/>
 	</bsdf>
-	<bsdf type="twosided" id="bois_claire.001">
-		<bsdf type="roughdielectric">
-			<float name="alpha" value="0.2"/>
-		</bsdf>
+	<bsdf type="roughdielectric" id="bois_claire.001">
+		<float name="alpha" value="0.2"/>
 	</bsdf>
 	<bsdf type="twosided" id="bronze">
 		<bsdf type="roughconductor">
@@ -193,10 +192,8 @@
 			<rgb name="diffuseReflectance" value="0.5, 0.5, 0.5"/>
 		</bsdf>
 	</bsdf>
-	<bsdf type="twosided" id="glass_orange_dark">
-		<bsdf type="dielectric">
-			<float name="ior" value="1.45"/>
-		</bsdf>
+	<bsdf type="dielectric" id="glass_orange_dark">
+		<float name="intIOR" value="1.45"/>
 	</bsdf>
 	<bsdf type="twosided" id="graine_de_cannelle">
 		<bsdf type="roughplastic">
@@ -230,10 +227,8 @@
 			<rgb name="diffuseReflectance" value="0.7, 0.402941, 0.047142"/>
 		</bsdf>
 	</bsdf>
-	<bsdf type="twosided" id="pot_de_miel">
-		<bsdf type="dielectric">
-			<float name="ior" value="1.45"/>
-		</bsdf>
+	<bsdf type="dielectric" id="pot_de_miel">
+		<float name="intIOR" value="1.45"/>
 	</bsdf>
 	<bsdf type="twosided" id="rop">
 		<bsdf type="roughplastic">
@@ -424,7 +419,7 @@
 	<shape type="obj">
 		<string name="filename" value="models/Plane.020.obj"/>
 		<ref id="Miel"/>
-		<medium type="homogeneous">
+		<medium name="interior" type="homogeneous">
 			<rgb name="sigmaA" value="0.0001 17.07096 68.16156"/>
 			<rgb name="sigmaS" value="0 0 0"/>
 			<phase type="hg">
@@ -447,7 +442,7 @@
 	<shape type="obj">
 		<string name="filename" value="models/Plane.obj"/>
 		<ref id="glass_orange_dark"/>
-		<medium type="homogeneous">
+		<medium name="interior" type="homogeneous">
 			<rgb name="sigmaA" value="180.544, 561.0, 1657"/>
 			<rgb name="sigmaS" value="35.65, 75.4, 124"/>
 			<phase type="hg">
@@ -556,7 +551,7 @@
 	<shape type="obj">
 		<string name="filename" value="models/Plane.038_Plane.039.obj"/>
 		<ref id="Miel"/>
-		<medium type="homogeneous">
+		<medium name="interior" type="homogeneous">
 			<rgb name="sigmaA" value="0.0001 17.07096 68.16156"/>
 			<rgb name="sigmaS" value="0 0 0"/>
 			<phase type="hg">
